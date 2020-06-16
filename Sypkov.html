@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>yfpdfybt</title>
+  <style>
+  	h1, h2 {
+		color: #fff;
+		font-weight: 800;
+		letter-spacing: 0.225em;/*em = размер шрифта*/
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase; /*Вывод заглавными буквами*/
+	}
+
+  .menu li{
+  	display: inline; /*Горизонтальное отображение*/
+  }
+
+  .menu {
+  	overflow: hidden; /*Отображение области внутри элемента*/
+  	list-style-type: none; 
+  	background-color: #1e252b; /*Цвет фона меню*/
+  	margin: 0; /*Расстояние между блоками*/
+  	padding: 0; /*Расстояние от края блока до текста*/
+  }
+
+  .menu a {
+  	text-decoration: none; /*Убирается подчёркивание ссылок*/ 
+  	text-align: center; /*Размещение текста по центру*/
+  	color: #f2f2f2; /*Цвет текста ссылок*/
+  	font-size: medium; /*Размер шрифта*/
+  	padding: 5%; /*Поля вокруг текста*/
+  }
+
+  .menu a:hover {
+  	/*Наведение на ссылку*/
+  	background-color: #ddd; /*Изменение цвета фона*/
+  	color: black; /*Изменение цвета текста*/
+  }
+
+  .menu a.active {
+  	/*Для активной ссылки*/
+	background-color: #0e1629; /*Изменение цвета фона*/
+  	color: white; /*Изменение цвета текста*/
+  }
+
+  .social_media img:hover {
+  	width: 2%;
+    opacity: .8;
+}
+
+  #back {
+	position: relative;
+
+  }
+
+  #back::before {
+  	/*before - отображение изображения до текста*/
+  	position: absolute;
+  	top: 0;/*Расстояние от верхнего*/
+    left: 0; /*Левого*/
+    bottom: 0; /*Нижнего*/
+    right: 0; /*И правого края*/
+  	background: url(https://miro.medium.com/max/2560/1*eY6ncb-wiHS9XRYpxg_Lcw.jpeg); /*Изображение на фоне*/
+  	opacity: .5; /*Затемнение*/
+  	content: ""; /*Содержимое*/
+  	z-index: -1; /*Размещение по z-оси элемента*/
+  }
+
+	#banner {
+		display: flex; /*Раcтягивание на всю ширину*/
+		flex-direction: column; /*Главная ось располагается вертикально и направлена сверху вниз.*/
+		justify-content: center;/*Флексы выравниваются по центру строки.*/
+		cursor: default;
+		height: 100vh;
+		min-height: 35em;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+
+	body {
+		color: #fff;
+		font-family: "Open Sans", Helvetica, sans-serif;
+		font-size: 15pt;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		line-height: 1.65em;
+		background-color: #1e252b;
+	}
+
+	#banner h2 {
+			transform: scale(1);/*исходный масштаб*/
+			transition: transform 0.5s ease, opacity 0.5s ease;
+			display: inline-block;
+			font-size: 1.75em;
+			opacity: 1;
+			padding: 0.35em 1em;
+			position: relative;
+			z-index: 1;
+		}
+
+		#banner h2:before, #banner h2:after {
+				transition: width 0.85s ease;
+				transition-delay: 0.25s;
+				background: #fff;
+				content: '';
+				display: block;
+				height: 2px;
+				position: absolute;
+				width: 100%;
+			}
+
+			#banner h2:before {
+				top: 0;
+				left: 0;
+			}
+
+			#banner h2:after {
+				bottom: 0;
+				right: 0;
+			}
+
+		#banner p {
+			letter-spacing: 0.225em;
+			text-transform: uppercase;
+		}
+
+			#banner p a {
+				color: inherit;
+			}
+			a {
+				text-decoration: none;
+			}
+
+#footer{
+	padding: 2em 0 2em 0;
+	text-align: center;
+
+}
+#footer .copyright{
+	padding: 0;
+	text-transform:uppercase;
+	font-size: 0.8em;
+
+	color: rgba(255,255,255,0.5);
+}
+* {
+	margin: 0;
+}
+#one, #two {
+	background-color: black;
+	text-align: center;
+	padding: 4em 0 2em 0; 
+}
+.about {
+	margin: 0;
+	background-color: #2b343d;
+	display: flex;
+	align-items: center;
+}
+.about .image {
+	order: 1;
+	width: 90%;
+}
+.about .image img{
+border-radius: 0;
+width: 100%;
+
+}
+.about .content {
+	order: 2;
+	padding: 2em 4em 0.1em 4em;
+	text-align: left;
+}
+.university {
+	margin:  0;
+	background-color: #273038;
+	text-align: left;
+	display: flex;
+}
+.university .image{
+	order: 2;
+	width: 40%;
+}
+.university .content{
+	order: 1;
+	padding: 2em 4em 0.1em 4em;
+	text-align: left;
+}
+.university .image img{
+	border-radius: 0;
+    width: 100%;
+}
+.arrow {
+      width: 60px;
+      height: 60px;
+      border-top: 10px solid #6E18C0;
+      border-right: 10px solid #6E18C0;
+      margin-right: 60px;
+  }    
+  .arrow-bottom {
+      transform: rotate(135deg);
+      display: block;
+      margin-left: auto;
+      margin-right: auto; } 
+
+   </style>
+ </head>
+ <body>
+ 	<header>
+ 		<ul class="menu">
+ 			<li><a href="#home" class="active">Home</a></li> <!-- Внутренняя ссылка на страницу -->
+ 			<li><a href="#about">About</a></li>
+ 			<li><a href="">Contacts</a></li>
+ 			<li><a href="">Photos</a></li>
+ 		</ul>
+ 	</header>
+	<a name="home"></a>
+	<div id="back"> <!-- div для фона -->
+		<section id="banner">
+		<div class="inner" id="Seva">
+			<h2>Vsevolod Sypkov</h2>
+			<p>Southern Federal University<br>
+				Institute of Computer Technologies<br>
+				and<br>
+				Information Security
+			</p>
+		</div>
+		bachelor student
+		</section>
+	</div>
+
+<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>A brief overview of my interests</h2>
+								<div class="arrow arrow-bottom" align="center"></div>  
+							</header>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<a name="about"> </a>
+					<section class="two">
+						<section class="about">
+							
+							<div align="left" class="image"><img src="image/Seva.jpg" alt="my photo" title="it's me"></div>
+							<div align ="right" class="content" >
+
+								<h2>Hello!</h2>
+								<p>I'm a first year student in Software Engineering. I am currently study in 
+								Southern Federal University located in old seaside town Taganrog. Since childhood I loved technical sciences. I am interested in programming and computer sciences.
+							</p>
+							<div align="right"><p class="quote">"Declare variables, not war"</p></div>
+							</div>
+						</section>
+						<section class="university">
+							<div class="image"><img width="30%" src="image/ufu.jpg" alt="Southern Federal University" title="Southern Federal University"></div><div class="content">
+								<h2>This is my university </h2>
+								
+								<p>It is the largest research and educational establishment of Rostov Oblast.</p>
+							</div>
+						</section>
+				</section>
+
+
+
+	<footer id="footer">
+		<div align ="center" class= "social_media">
+			<a href="https://vk.com/cbi4cbi4cbi4" target="_blank" title="Мой vk">
+				<img width="3%" alt="vk" src="image/vk.png">
+			</a>
+			<a href="https://wa.me/89094578654" target="_blank" title="Мой Whatsapp">
+				<img width="3%" alt="Whatsapp" src="image/whatsapp.png">
+			</a>
+			<a href="https://www.youtube.com/channel/UCiaIEMGvbzi0YlLs8QeHLQQ?view_as=subscriber" target="_blank" title="Мой YouTube">
+				<img width="3%" alt="YouTube" src="image/youtube.png">
+			</a>
+		</div>
+		<div class="copyright">
+							2020 Vsevolod Sypkov
+						</div>
+	</footer>
+ </body>
+</html>
