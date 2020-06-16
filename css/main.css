@@ -140,8 +140,8 @@ h1, h2 {
 	text-align: center;
 }
 footer {
-	padding 100% 0 0 0;
-	bottom: 0;
+	padding 0 0 0 0;
+	bottom: 1000;
 }
 #footer .copyright{
 	padding: 0;
