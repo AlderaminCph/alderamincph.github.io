@@ -140,18 +140,16 @@ h1, h2 {
 	text-align: center;
 }
 footer {
-	padding 0 0 0 0;
-	bottom: 1000;
-}
-#footer .copyright{
-	padding: 0;
-	text-transform:uppercase;
-	font-size: 0.8em;
 	position: relative;
 	margin-top: -150px; /* отрицательное значение высоты футера */
 	height: 150px;
 	clear:both;
 
+}
+#footer .copyright{
+	padding: 0;
+	text-transform:uppercase;
+	font-size: 0.8em;
 	color: rgba(255,255,255,0.5);
 }
 * {
