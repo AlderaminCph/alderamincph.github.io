@@ -142,6 +142,9 @@ h1, h2 {
 	padding: 2em 0 2em 0;
 	text-align: center;
 	flex: 0 0 auto;
+	position: fixed;
+	bottom: 0;
+	height: 10em;
 
 }
 #footer .copyright{
