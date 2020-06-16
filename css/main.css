@@ -3,7 +3,7 @@
 
 .clearfix:after {content: ".";
 	display: block;
-	height: 0;
+	height: 100;
 	clear: both;
 	visibility: hidden;}
 .clearfix {display: inline-block;}
