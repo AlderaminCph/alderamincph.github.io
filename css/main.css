@@ -89,9 +89,6 @@ h1, h2 {
 		letter-spacing: 0.075em;
 		line-height: 1.65em;
 		background-color: #1e252b;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
 	}
 
 	#banner h2 {
@@ -143,7 +140,7 @@ h1, h2 {
 	text-align: center;
 }
 footer {
-	height: 10em;
+	padding 1%;
 }
 #footer .copyright{
 	padding: 0;
