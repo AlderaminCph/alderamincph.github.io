@@ -1,18 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 /*Импорт шрифтов*/
 
-.clearfix:after {content: ".";
-	display: block;
-	height: 100;
-	clear: both;
-	visibility: hidden;}
-.clearfix {display: inline-block;}
-/* Hides from IE-mac \*/
-* html .clearfix { height: 1%;}
-.clearfix {display: block;}
-/* End hide from IE-mac */
-
-
 h1, h2 {
 		color: #fff;
 		font-weight: 800;
@@ -154,8 +142,7 @@ h1, h2 {
 footer {
 	position: relative;
 	margin-top: 0; /* отрицательное значение высоты футера */
-	height: 150px;
-	clear:both;
+	max-height: 100px;
 
 }
 #footer .copyright{
