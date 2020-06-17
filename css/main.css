@@ -142,7 +142,7 @@ h1, h2 {
 footer {
 	position: relative;
 	margin-top: 0; /* отрицательное значение высоты футера */
-	max-height: 100px;
+	max-height: 50px;
 
 }
 #footer .copyright{
